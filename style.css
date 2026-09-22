@@ -1,0 +1,24 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#09070b}
+body{font-family:Inter,system-ui,sans-serif;color:#f8f2f7;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 50% 42%,rgba(125,51,103,.18),transparent 42%),linear-gradient(145deg,#09070b 0%,#110a12 48%,#080609 100%);pointer-events:none}
+.page{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 18px;position:relative}
+.card{width:min(100%,560px);padding:48px 46px 44px;text-align:center;border:1px solid rgba(255,255,255,.1);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));box-shadow:0 30px 90px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);position:relative;overflow:hidden}
+.card:after{content:"";position:absolute;left:15%;right:15%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,183,224,.65),transparent)}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);font-size:10px;font-weight:700;letter-spacing:.16em;color:#d9cbd5}
+.badge span{opacity:.5}
+.symbol{margin:28px auto 10px;width:54px;height:54px;display:grid;place-items:center;border-radius:50%;font-size:20px;color:#f4bfdc;border:1px solid rgba(244,191,220,.25);background:rgba(244,191,220,.07);box-shadow:0 0 35px rgba(217,100,164,.14)}
+.eyebrow{margin:0 0 14px;font-size:10px;font-weight:700;letter-spacing:.28em;color:#bd9fb2}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(46px,8vw,70px);line-height:.9;font-weight:600;letter-spacing:-.035em;margin:0}
+h1 em{display:block;font-style:italic;color:#f1b8d6;margin-top:10px}
+.description{max-width:430px;margin:25px auto 30px;color:#b9adb6;font-size:14px;line-height:1.75}
+.cta{min-height:58px;padding:0 23px;display:flex;align-items:center;justify-content:center;gap:12px;border-radius:15px;text-decoration:none;color:#fff;font-size:14px;font-weight:700;background:linear-gradient(135deg,#a94d80,#7e3c68);box-shadow:0 14px 35px rgba(145,57,108,.28),inset 0 1px rgba(255,255,255,.2);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.cta strong{font-size:18px}
+.cta:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 18px 42px rgba(145,57,108,.38)}
+.cta:active{transform:translateY(0)}
+.note{margin:14px 0 0;color:#766b74;font-size:11px}
+footer{margin-top:20px;color:#615961;font-size:10px;letter-spacing:.08em}
+.glow{position:fixed;width:340px;height:340px;border-radius:50%;filter:blur(90px);opacity:.16;pointer-events:none}
+.glow-one{background:#b84c8a;top:-130px;right:-90px}
+.glow-two{background:#5c3670;bottom:-150px;left:-100px}
+@media(max-width:520px){.page{padding:18px 14px}.card{padding:38px 22px 32px;border-radius:23px}.symbol{margin-top:23px}h1{font-size:51px}.description{font-size:13px;margin-top:22px}.cta{font-size:13px;padding:0 16px}}
